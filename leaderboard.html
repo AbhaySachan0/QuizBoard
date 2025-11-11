@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leaderboard | Quiz Conductor</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <h1>🏆 Quiz Leaderboard</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="user-login.html">User Login</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="leaderboard-section">
+      <h2>Top Performers</h2>
+      <p>Here’s the list of top students with the highest scores!</p>
+
+      <div class="leaderboard">
+        <table>
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Name</th>
+              <th>Score</th>
+            </tr>
+          </thead>
+          <tbody id="leaderboardBody">
+            <!-- Example Data (You can make this dynamic later) -->
+            <tr class="gold">
+              <td>🥇 1</td>
+              <td>Rohit</td>
+              <td>98</td>
+            </tr>
+            <tr class="silver">
+              <td>🥈 2</td>
+              <td>Rahul</td>
+              <td>94</td>
+            </tr>
+            <tr class="bronze">
+              <td>🥉 3</td>
+              <td>Rohit Patel</td>
+              <td>89</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Ananya Gupta</td>
+              <td>85</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>Ravi Singh</td>
+              <td>83</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="center">
+        <a href="user-login.html" class="btn">🔁 Take Quiz Again</a>
+        <a href="index.html" class="btn">🏠 Back to Home</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Quiz Conductor | Made with ❤️ using HTML & CSS</p>
+  </footer>
+</body>
+</html>

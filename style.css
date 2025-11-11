@@ -1,0 +1,218 @@
+/* 🌐 Global Styles */
+html, body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #f9f9f9, #f1f1f1);
+  color: #2b2b2b;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+/* 🧭 Header / Navbar */
+header {
+  background: linear-gradient(135deg, #222831, #393e46);
+  color: #f9f9f9;
+  padding: 12px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+header h1, header h2 {
+  font-size: 1.4rem;
+  margin: 0;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+nav a {
+  color: #f9f9f9;
+  margin-left: 15px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+nav a:hover {
+  background: rgba(255, 215, 0, 0.15);
+  color: #ffd369;
+}
+
+/* 🧩 Main Section */
+main { flex: 1; }
+.center {
+  text-align: center;
+  margin-top: 80px;
+  padding: 0 20px;
+}
+.center h2 { color: #222831; font-size: 2rem; margin-bottom: 10px; }
+.center p { color: #555; font-size: 1.1rem; margin-bottom: 30px; }
+
+/* 🔘 Buttons */
+.btn, button.btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #ffd369, #f6c443);
+  color: #222;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(255, 211, 105, 0.35);
+  transition: 0.3s;
+  cursor: pointer;
+}
+.btn:hover, button.btn:hover {
+  background: linear-gradient(135deg, #f6c443, #ffb703);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(255, 211, 105, 0.4);
+}
+
+/* 📦 Containers */
+.login-container, .form-section, .quiz-container, .leaderboard-section, .result-box {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+  padding: 40px;
+  margin: 60px auto;
+  max-width: 700px;
+  width: 90%;
+  transition: 0.3s;
+}
+.login-container:hover, .quiz-container:hover, .leaderboard-section:hover {
+  transform: translateY(-2px);
+}
+
+/* 🧠 Input Fields */
+label { display: block; margin-top: 12px; color: #333; font-weight: 500; }
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-top: 6px;
+  transition: 0.3s;
+  font-size: 1rem;
+}
+input:focus {
+  border-color: #f6c443;
+  box-shadow: 0 0 6px rgba(255, 211, 105, 0.3);
+  outline: none;
+}
+.note {
+  text-align: center;
+  color: #777;
+  font-size: 0.9em;
+  margin-top: 20px;
+}
+
+/* ❓ Quiz Section */
+.quiz-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.question {
+  background: #fcfcfc;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 20px;
+  transition: 0.3s;
+}
+.question:hover {
+  background: #fff9e6;
+  box-shadow: 0 4px 10px rgba(255, 211, 105, 0.15);
+}
+.question p {
+  color: #222831;
+  font-weight: 600;
+  margin-bottom: 12px;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.question label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #fff;
+  border: 1px solid #e2e2e2;
+  padding: 10px 14px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+.question label:hover {
+  background: #fff6d8;
+  border-color: #f6c443;
+}
+.question input[type="radio"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #f6c443;
+  cursor: pointer;
+}
+.question span {
+  flex: 1;
+  font-size: 0.95rem;
+  color: #333;
+}
+.quiz-container .btn {
+  display: block;
+  width: fit-content;
+  margin: 30px auto 10px;
+}
+
+/* 🏆 Leaderboard */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 10px;
+  overflow: hidden;
+}
+thead {
+  background: linear-gradient(135deg, #222831, #393e46);
+  color: #ffd369;
+}
+th, td {
+  padding: 15px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+tbody tr:nth-child(even) { background: #f9f9f9; }
+tbody tr:hover { background: #fff9e6; transition: 0.3s; }
+.gold td { background: #fff5b0; font-weight: 600; }
+.silver td { background: #f1f1f1; font-weight: 600; }
+.bronze td { background: #ffe0b3; font-weight: 600; }
+
+/* 🦶 Footer (Sticky) */
+footer {
+  background: linear-gradient(135deg, #222831, #393e46);
+  color: #ffd369;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9rem;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.08);
+  margin-top: auto;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 600px) {
+  header { flex-direction: column; text-align: center; padding: 12px 15px; }
+  nav a { margin: 6px 8px; display: inline-block; }
+  .btn { display: block; width: 80%; margin: 10px auto; }
+  .login-container, .quiz-container { padding: 25px; }
+}
+
+/* ✨ Animations */
+.fade-in { animation: fadeIn 0.6s ease-in; }
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
