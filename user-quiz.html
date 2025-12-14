@@ -4,46 +4,62 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Take Quiz | Quiz Conductor</title>
+
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
+
+  <!-- Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
+  <!-- 🧭 Header -->
   <header>
     <h2>📖 Student Quiz</h2>
-    <nav><a href="index.html">Logout</a></nav>
+    <nav>
+      <a href="index.html">Logout</a>
+    </nav>
   </header>
 
-  <main class="quiz-container fade-in">
-    <h3>🧩 Sample Quiz</h3>
-    <p class="quiz-intro">Answer all questions carefully before submitting.</p>
+  <!-- 👇 QUIZ PAGE WRAPPER (IMPORTANT) -->
+  <div class="quiz-page">
 
-    <form>
+    <!-- 🧩 Quiz Container -->
+    <main class="quiz-container fade-in">
+      <h3>🧩 Sample Quiz</h3>
+      <p class="quiz-intro">
+        Answer all questions carefully before submitting.
+      </p>
+
+      <!-- ❓ Question Card -->
       <div class="question-card">
-        <p><strong>1️⃣ What does HTML stand for?</strong></p>
-        <label><input type="radio" name="q1"> Hyper Text Markup Language</label>
-        <label><input type="radio" name="q1"> HighText Machine Language</label>
-        <label><input type="radio" name="q1"> Hyperlink and Text Management Language</label>
+        <p id="question"></p>
+
+        <label>
+          <input type="radio" name="answer" value="a">
+          <span id="a_text"></span>
+        </label>
+
+        <label>
+          <input type="radio" name="answer" value="b">
+          <span id="b_text"></span>
+        </label>
+
+        <label>
+          <input type="radio" name="answer" value="c">
+          <span id="c_text"></span>
+        </label>
       </div>
 
-      <div class="question-card">
-        <p><strong>2️⃣ Which CSS property is used to change text color?</strong></p>
-        <label><input type="radio" name="q2"> color</label>
-        <label><input type="radio" name="q2"> text-color</label>
-        <label><input type="radio" name="q2"> font-color</label>
-      </div>
-
-      <div class="question-card">
-        <p><strong>3️⃣ HTML files are saved with which extension?</strong></p>
-        <label><input type="radio" name="q3"> .htm or .html</label>
-        <label><input type="radio" name="q3"> .doc</label>
-        <label><input type="radio" name="q3"> .css</label>
-      </div>
-
-      <!-- Submit just links to leaderboard.html -->
+      <!-- 🔘 Button -->
       <div class="center">
-        <a href="leaderboard.html" class="btn">✅ Submit Answers</a>
+        <button class="btn" id="nextBtn">Next ➡️</button>
       </div>
-    </form>
-  </main>
+    </main>
+
+  </div>
+
+  <!-- JS -->
+  <script src="script.js"></script>
 </body>
 </html>

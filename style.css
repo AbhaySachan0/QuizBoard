@@ -216,3 +216,70 @@ footer {
   from { opacity: 0; transform: translateY(8px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+
+/* ================================================= */
+/* 🎯 QUIZ PAGE ONLY – SAFE OVERRIDES (DO NOT REMOVE) */
+/* ================================================= */
+
+.quiz-page label {
+  display: flex;                /* override global block */
+  align-items: center;
+  gap: 12px;
+  margin-top: 0;
+}
+
+/* Fix radio buttons only on quiz page */
+.quiz-page input[type="radio"] {
+  width: auto;                  /* override input { width:100% } */
+  height: 18px;
+  margin: 0;
+  accent-color: #f6c443;
+  cursor: pointer;
+}
+
+/* Question card (matches your design) */
+.quiz-page .question-card {
+  background: #fcfcfc;
+  border: 1px solid #eee;
+  border-radius: 14px;
+  padding: 25px;
+  margin-top: 20px;
+}
+
+/* Question text */
+.quiz-page .question-card p {
+  font-weight: 600;
+  margin-bottom: 18px;
+  font-size: 1.05rem;
+}
+
+/* Options styling */
+.quiz-page .question-card label {
+  background: #fff;
+  border: 1px solid #e2e2e2;
+  padding: 12px 16px;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.quiz-page .question-card label:hover {
+  background: #fff6d8;
+  border-color: #f6c443;
+}
+
+/* Option text */
+.quiz-page .question-card span {
+  font-size: 0.95rem;
+  color: #333;
+  flex: 1;
+}
+
+/* Selected option effect */
+.quiz-page input[type="radio"]:checked + span {
+  font-weight: 600;
+  color: #222;
+}
+
